@@ -1,0 +1,25 @@
+On:push 
+Jobs:
+  job1: 
+    -name: ubuntu test
+     runs-on:ubuntu-latest
+     uses :action/checkout@v2
+     steps :"Print the Date" | env
+  job2 : 
+    -name: mac test
+     runs-on :macos-latest
+     uses :action/checkout@v2
+     steps :"Print the Date" |
+  job3: 
+    -name: ubuntu test
+     runs-on :windows-latest
+     uses :action/checkout@v2
+     steps :"Print the Date" | get-ChildItem-Env
+  job4: 
+    -name:ubuntu test
+     needs:[job1,job2,job3]
+     runs-on:ubuntu-latest
+     uses: action/checkout@v2
+     steps:"Print the Date" | env
+ 
+            
