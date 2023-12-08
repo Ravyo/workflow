@@ -10,7 +10,7 @@ jobs:
         run : Python hello.py 
       - uses: actions/checkout@v2
    build:
-     name: ${{env.APP_NAME}} 
+     name: Build the app
      needs: [test]
      runs-on: ubuntu-latest
      steps:
