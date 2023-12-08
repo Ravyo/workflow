@@ -7,7 +7,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
       - name: Running Test 
-        run : Py hello.py 
+        run : python hello.py 
       - uses: actions/checkout@v2
    build:
      name: Build the app
